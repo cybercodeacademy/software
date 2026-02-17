@@ -269,7 +269,7 @@ This folder structure is designed to help sellers organize and manage all aspect
 - Document important processes and procedures
 - Review and update your folder structure periodically
 
-Created: $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+Created: $(Get-Date -Format "yyyy-MM-ddTHH:mm:ss")
 "@
 
     Set-Content -Path (Join-Path $BaseDir "README.md") -Value $mainReadme
@@ -308,4 +308,6 @@ Write-Host ""
 $openFolder = Read-Host "Would you like to open the folder now? (Y/N)"
 if ($openFolder -eq 'Y' -or $openFolder -eq 'y') {
     Invoke-Item $BaseDir
+} else {
+    Write-Host "Folder not opened. You can find it at: $BaseDir" -ForegroundColor Yellow
 }
