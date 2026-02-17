@@ -269,7 +269,7 @@ This folder structure is designed to help sellers organize and manage all aspect
 - Document important processes and procedures
 - Review and update your folder structure periodically
 
-Created: $(Get-Date -Format "yyyy-MM-ddTHH:mm:ss")
+Created: $(Get-Date -Format "yyyy-MM-ddTHH:mm:sszzz")
 "@
 
     Set-Content -Path (Join-Path $BaseDir "README.md") -Value $mainReadme
